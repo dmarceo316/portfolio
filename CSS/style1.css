@@ -1,0 +1,265 @@
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } */
+
+body, html{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+/* slider animation  */
+.slider {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    background: white;
+    z-index: -1;
+}
+
+nav {
+    background-color: #2AB7CA;
+    display:grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    min-height: 15vh;
+    align-items: center;
+}
+
+#logo{
+    letter-spacing: 2px;
+    font-size: 17px;
+    grid-column: 2/3;
+}
+
+nav ul {
+    display: flex;
+    position: absolute;
+    top: 7vh;
+    left: 150vh;
+}
+
+nav li {
+    list-style: none;
+    padding-right: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+nav li a:hover{
+    color: red;
+}
+
+nav .burger {
+    display: '';
+}
+
+nav .burger div{
+    width: 25px;
+    height: 2px;
+    margin: 4px;
+    background-color: black;
+}
+
+section{
+    display:flex;
+    height: 80vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.portland{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.portland img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portland h1 {
+    position: absolute;
+    bottom: 10vh;
+    left: 125vh;
+    color: #fff;
+    letter-spacing: 6px;
+    font-size: 50px;
+    z-index: 1;
+}
+
+.portland ul {
+    display:flex;
+    position: absolute;
+    left: 140vh;
+    top: 45vh;
+    z-index: 3;
+}
+
+.portland li {
+    list-style: none;
+    padding-right: 30px;
+}
+
+.portland li:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.portland::after{
+    content: '';
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.2;
+}
+
+.gmail, .facebook, .github{
+    width: 50px;
+}
+
+
+/* My work section  */
+#My-work{
+text-align: center;
+height: 700px;
+position: relative;
+}
+
+#My-work h1{
+    font-size: 5em;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+}
+
+#My-work ul{
+    list-style: none;
+
+}
+
+.links{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.links a{
+    color: black;
+    text-decoration: none;
+}
+
+.description{
+    font-size: 25px
+}
+
+/* underline effect for links  */
+
+.links::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition:  .3s
+}
+
+.links:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+
+/* About me section */
+#About-me{
+    text-align: center;
+    height: 500px;
+    padding-top:150px;
+}
+
+#About-me h1{
+    font-size: 5em;
+    letter-spacing: 5px;
+    margin-bottom: 20px;    
+}
+#About-me p {
+    padding: 50px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+
+/* Contact me section */
+#Contact-me{
+    background-color: #2AB7CA;
+    height: 350px;
+    margin-top: 150px;
+    text-align: center;
+}
+
+#Contact-me h1{
+    font-size: 5em;
+}
+
+#Contact-me p{
+    font-size: 25px;
+    background-color: #2AB7CA;
+}
+
+#Contact-me ul{
+    display: inline-flex;
+}
+
+#Contact-me li{
+    list-style: none;
+    padding-right: 20px;
+    margin-right: 50px;
+}
+
+
+#Contact-me img{
+    width: 40px;
+
+}
+
+.phone{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cite{
+    display: inline-flex;
+}
+#logo{
+    animation: fade 2s infinite alternate linear;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+};
